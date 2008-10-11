@@ -1,5 +1,5 @@
 %define name gtk-css-engine
-%define version 0.1.0
+%define version 0.2.0
 %define release %mkrel 1
 
 %define libname %mklibname %{name}
@@ -49,7 +49,7 @@ Library files for %{name}.
 %defattr(-,root,root)
 %doc README NEWS AUTHORS
 %{_datadir}/themes/*
-%_datadir/gtk-doc/html/ccd
+%_datadir/gtk-doc/html/ccss
 
 %files -n %{libname}
 %defattr(-,root,root)
