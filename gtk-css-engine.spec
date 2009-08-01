@@ -1,5 +1,5 @@
 %define name gtk-css-engine
-%define version 0.2.0
+%define version 0.3.0
 %define release %mkrel 1
 
 %define libname %mklibname %{name}
@@ -18,6 +18,7 @@ BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 Requires: %{libname} = %{version}
 BuildRequires: gtk2-devel >= 2.12
 BuildRequires: librsvg-devel >= 2.16
+BuildRequires: libccss-devel >= 0.4.0
 
 %description
 This is a GTK theme engine that is configured with Cascading Style
@@ -34,7 +35,6 @@ Library files for %{name}.
 %setup -q
 
 %build
-%define _disable_ld_as_needed 1
 %configure2_5x
 %make
 
@@ -48,8 +48,8 @@ Library files for %{name}.
 %files
 %defattr(-,root,root)
 %doc README NEWS AUTHORS
+%{_sysconfdir}/gtk-css-engine/user-agent.css
 %{_datadir}/themes/*
-%_datadir/gtk-doc/html/ccss
 
 %files -n %{libname}
 %defattr(-,root,root)
