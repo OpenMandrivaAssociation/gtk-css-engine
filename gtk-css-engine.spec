@@ -1,5 +1,5 @@
 %define name gtk-css-engine
-%define version 0.3.0
+%define version 0.3.1
 %define release %mkrel 1
 
 %define libname %mklibname %{name}
@@ -11,14 +11,15 @@ Name:    %{name}
 Version: %{version}
 Release: %{release}
 URL: http://bzr-playground.gnome.org/~robsta/gtk-css-engine/
-Source0: http://download.gnome.org/sources/gtk-css-engine/%{name}-%{version}.tar.bz2
+Source0: http://ftp.gnome.org/pub/GNOME/sources/%name/%{name}-%{version}.tar.bz2
 License: LGPLv2+
 Group: 	 Graphical desktop/GNOME
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 Requires: %{libname} = %{version}
 BuildRequires: gtk2-devel >= 2.12
 BuildRequires: librsvg-devel >= 2.16
-BuildRequires: libccss-devel >= 0.4.0
+BuildRequires: libccss-devel >= 0.5.0
+BuildRequires: libccss >= 0.5.0
 
 %description
 This is a GTK theme engine that is configured with Cascading Style
