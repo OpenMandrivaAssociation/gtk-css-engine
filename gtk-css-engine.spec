@@ -1,6 +1,6 @@
 %define name gtk-css-engine
 %define version 0.3.1
-%define release 2
+%define release 3
 
 %define libname %mklibname %{name}
 
